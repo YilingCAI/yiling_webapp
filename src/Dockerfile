@@ -9,5 +9,5 @@ RUN sed -ri -r "/^Listen 80/c\Listen ${PORT}" /etc/httpd/conf/httpd.conf
 
 EXPOSE ${PORT}
 USER apache
-COPY index.html /var/www/html/
+COPY src/index.html /var/www/html/
 CMD ["httpd", "-D", "FOREGROUND"]
